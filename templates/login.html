@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Ranking Login</title>
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+<link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+  <div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<img src="/static/Home_page_image.png" style="width: 50px;height: 50px;margin:5px;display:block; position:relative"></img>
+				<h1><a class="navbar-brand" href="#">Resume Ranking System</a></h1>
+			</div>
+		</nav>
+	</div>
+<div id="login-form-wrap">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-6">
+        <div class="card text-center" style="card-align-center">
+          <div class="card-header">
+            <h2>Login</h2>
+  <form id="login-form" method="POST" action='/loginCheck'>
+    <p>
+      <div class="inputtext">
+        Username:
+    </div>
+    <input type="text" id="username" name="user_id" placeholder="Username" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <div class="input nobottomborder">
+      <div class="inputtext">
+          Password:
+      </div>
+
+      <div class="inputcontent">
+          <input type="password" id="passwd" name="passwd" placeholder="Password"/><br /><span></span><span></span></i>
+      </div>
+  </div>
+  <p>
+  <div class="buttons">
+      <input type="submit" value="Login"/>
+  </div>
+</p>
+<p>
+  <div class="container text-center" id="create-account-wrap">
+    <p><a href="forgotPswd">forgot Password?</a><p>
+  </div>
+</p>
+  <div class="container text-center" id="create-account-wrap">
+    <p>Not a member? <a href="signup">Create Account</a><p>
+  </div>
+  </form>
+  <!--<script>
+    function checkPassword(){
+     if(document.getElementById('username').value == 'admin' && document.getElementById('password').value == 'admin@123' ){
+      alert('Correct Password!'); 
+        window.location.replace('resumeRanker');
+       } 
+     }
+    </script>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+</body>
+</html>

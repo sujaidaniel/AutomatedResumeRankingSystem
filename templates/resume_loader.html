@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Ranking Page</title>
+	<link rel="stylesheet" href="/static/bootstrap.min.css">
+</head>
+<body>
+    <div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<img src="/static/Home_page_image.png" style="width: 50px;height: 50px;margin:5px;display:block; position:relative"></img>
+				<h1><a class="navbar-brand" href="#">Resume Ranking System</a></h1>
+			</div>
+		</nav>
+	</div>
+	<form id="resumeForm" method="post" enctype="multipart/form-data" target="_blank" >
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col col-lg-6">
+			<div class="card text-center" style="card-align-center">
+				<div class="card-header">
+				  Upload Templete Resume:
+				</div>
+				<div class="card-body">
+					<input type="file" name="reqFile">
+				</div>
+			  </div>
+			  <div class="card text-center" style="card-align-center">
+				
+					Upload Resume File:
+				<div class="card-body text-center">
+					<input type="file" name="reqFile">
+				</div>
+				<div style="margin-top:20px;text-align:center;">
+					<button type="submit"style="width: 20%;height: 25px;background: transparent;color: white;background-color: dimgrey;"  value="submit">Submit</button>
+				 </div>
+				 <div style="margin:20px">
+					{% with messages = get_flashed_messages() %}
+					{% if messages %}
+					<ul class=flashes>
+						{% for message in messages %}
+						<li>{{ message }}</li>
+						{% endfor %}
+					</ul>
+					{% endif %}
+					{% endwith %}
+				</div>
+			  </div>
+		</div>
+	</div>
+</form>
+</body>
+</html>
